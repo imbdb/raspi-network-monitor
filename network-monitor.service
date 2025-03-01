@@ -1,0 +1,10 @@
+[Unit]
+Description=Raspi Network Monitor
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/.deno/bin/deno run --allow-net --allow-read /home/ubuntu/nmon.ts
+Restart=always
+User=ubuntu
+
+[Install]
